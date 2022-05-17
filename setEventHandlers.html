@@ -9,13 +9,18 @@
 <body>
     <p id="Clicking-method"></p>
     <button onclick="HandleClickingMethod()">Click1</button> 
-    <button>Click2</button>
+    <button id="Handle-Event">Click2</button>
     <script>
         function HandleClickingMethod(){
             const ClickingMethod = document.getElementById('Clicking-method');
             ClickingMethod.innerText ='Hello !'
 
         }
+        //directMethod
+        document.getElementById('Handle-Event').addEventListener('click', function(){
+            const ClickingMethod = document.getElementById('Clicking-method');
+            ClickingMethod.innerText= 'Welcome !'
+        })
     </script>
 </body>
 </html>
